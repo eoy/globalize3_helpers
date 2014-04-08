@@ -44,7 +44,7 @@ module ActionView::Helpers
           class: "#{active_class}",
         )
         fields << self.template.content_tag(:div,
-          self.semantic_fields_for(*(args.dup << self.object.translation_for(locale)), &proc),
+          self.simple_fields_for(*(args.dup << self.object.translation_for(locale)), &proc),
           :id => "#{url}",
           class: "tab-pane fade #{active_class}"
         )
